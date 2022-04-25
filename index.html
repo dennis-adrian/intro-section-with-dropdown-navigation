@@ -11,30 +11,76 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,500;1,700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    Features Company Careers About Login Register Make remote work Get your team
-    in sync, no matter your location. Streamline processes, create team rituals,
-    and watch productivity soar. Learn more
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="https://github.com/dennis-adrian">Dennis Adrian</a>.
-    </div>
+    <header>
+      <img src="./images/logo.svg" alt="snap logo" />
+      <img
+        class="header__menu-icon"
+        src="./images/icon-menu.svg"
+        alt="menu icon"
+      />
+    </header>
+    <section class="hero">
+      <img
+        class="hero__image"
+        src="./images/image-hero-mobile.png"
+        alt="hero"
+      />
+    </section>
+    <main>
+      <h1 class="main__title">Make remote work</h1>
+      <p>
+        Get your team in sync, no matter your location. Streamline processes,
+        create team ritual, and watch productivity soar.
+      </p>
+    </main>
+    <section class="cta">
+      <button class="cta__button">Learn more</button>
+    </section>
+    <footer>
+      <section class="footer__clients">
+        <img
+          src="./images/client-databiz.svg"
+          alt="databiz logo"
+          height="16px"
+          width="80px"
+        />
+        <img
+          src="./images/client-audiophile.svg"
+          alt="audiophile logo"
+          height="24px"
+          width="56px"
+        />
+        <img
+          src="./images/client-meet.svg"
+          alt="meet logo"
+          height="16px"
+          width="64px"
+        />
+        <img
+          src="./images/client-maker.svg"
+          alt="maker logo"
+          height="16px"
+          width="64px"
+        />
+      </section>
+      <section class="footer__attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/dennis-adrian">Dennis Adrian</a>.
+      </section>
+    </footer>
   </body>
 </html>
