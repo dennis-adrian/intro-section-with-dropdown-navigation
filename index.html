@@ -28,8 +28,26 @@
         class="header__menu-icon"
         src="./images/icon-menu.svg"
         alt="menu icon"
+        onclick="showMenu()"
       />
     </header>
+    <section class="mobile-sidebar" id="mobile-sidebar">
+      <nav class="mobile-sidebar__menu">
+        <div class="menu__header">
+          <img
+            src="./images/icon-close-menu.svg"
+            alt="close menu button"
+            onclick="hideMenu()"
+          />
+        </div>
+        <ul>
+          <li>Features</li>
+          <li>Company</li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+      </nav>
+    </section>
     <section class="hero">
       <img
         class="hero__image"
@@ -83,4 +101,5 @@
       </section>
     </footer>
   </body>
+  <script src="index.js"></script>
 </html>

@@ -70,4 +70,40 @@ main {
 .footer__attribution {
   text-align: center;
   font-size: 12px;
+  padding-bottom: 8px;
+}
+
+.mobile-sidebar {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.mobile-sidebar__menu {
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  width: 65%;
+}
+
+.menu__header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-sidebar__menu > ul > li {
+  padding-bottom: 28px;
 }
