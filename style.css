@@ -13,14 +13,27 @@
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
   height: 68px;
   padding: 20px;
 }
 
+.header__button {
+  border: none;
+}
+
 .header__menu-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 999;
+}
+
+.header__menu-icon--open {
   height: 20px;
+}
+
+.header__menu-icon--close {
+  height: 28px;
 }
 
 .hero {
@@ -98,12 +111,29 @@ main {
   width: 100%;
 }
 
-nav > ul {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.mobile-sidebar__menu > ul > li {
-  padding-bottom: 28px;
+.mobile-sidebar__menu li {
+  padding-bottom: 20px;
+}
+
+.list-item-label-with-icon {
+  display: flex;
+  align-items: center;
+}
+
+.icon-left {
+  padding-right: 8px;
+}
+
+.icon-right {
+  padding-left: 8px;
+}
+
+.second-level-list {
+  padding-left: 20px;
 }
