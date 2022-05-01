@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+    <!-- displays site properly based on user"s device -->
 
     <link
       rel="icon"
@@ -23,14 +23,32 @@
   </head>
   <body>
     <header>
-      <img src="./images/logo.svg" alt="snap logo" />
-      <button class="header__button" id="mobile-header-button" onclick="toggleMobileSidebar()">
+      <img class="logo" src="./images/logo.svg" alt="snap logo" />
+      <button class="header__button no-border mobile" id="mobileHeaderButton" onclick="toggleMobileSidebar()">
         <img
           class="header__menu-icon header__menu-icon--open"
           src="./images/icon-menu.svg"
           alt="menu icon"
         />
       </button>
+      <nav class="desktop-navbar">
+        <ul>
+          <li class="navbar-label-with-icon">
+            Features
+            <img class="icon-right" id="featuresLabelIcon" src="./images/icon-arrow-down.svg">
+          </li>
+          <li class="navbar-label-with-icon">
+            Company
+            <img class="icon-right" id="featuresLabelIcon" src="./images/icon-arrow-down.svg">
+          </li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+        <div>
+          <button class="header__button no-border desktop">Login</button>
+          <button class="header__button border desktop">Register</button>
+        </div>
+      </nav>
     </header>
     <section class="hero">
       <img
@@ -41,7 +59,7 @@
     </section>
     <main>
       <h1 class="main__title">Make remote work</h1>
-      <p>
+      <p class="main__text">
         Get your team in sync, no matter your location. Streamline processes,
         create team ritual, and watch productivity soar.
       </p>

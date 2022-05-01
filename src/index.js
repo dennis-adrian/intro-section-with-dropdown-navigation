@@ -32,7 +32,7 @@ const mobileSidebar = getElement('mobileSidebar');
 
 function toggleMobileSidebar() {
   if (mobileSidebar.style.display === 'block') {
-    document.getElementById('mobile-header-button').innerHTML = `
+    document.getElementById('mobileHeaderButton').innerHTML = `
     <img
       class='header__menu-icon header__menu-icon--open'
       src='./images/icon-menu.svg'
@@ -42,7 +42,7 @@ function toggleMobileSidebar() {
 
     mobileSidebar.style.display = 'none';
   } else {
-    document.getElementById('mobile-header-button').innerHTML = `
+    document.getElementById('mobileHeaderButton').innerHTML = `
     <img
       class='header__menu-icon header__menu-icon--close'
       src='./images/icon-close-menu.svg'
@@ -57,7 +57,7 @@ const mobileNav = `
   <nav class='mobile-sidebar__menu'>
     <div class='menu__header'></div>
     <ul id='navigationList'>
-      <li class='list-item-label-with-icon' onclick='toggleFeaturesLabel()'>
+      <li class='navbar-label-with-icon' onclick='toggleFeaturesLabel()'>
         Features
         <img class='icon-right' id='featuresLabelIcon' src='./images/icon-arrow-down.svg'>
       </li>

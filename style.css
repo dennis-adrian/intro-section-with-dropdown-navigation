@@ -13,11 +13,12 @@
 }
 
 header {
+  font-size: 18px;
   height: 68px;
   padding: 20px;
 }
 
-.header__button {
+.header__button.no-border {
   border: none;
 }
 
@@ -36,6 +37,10 @@ header {
   height: 28px;
 }
 
+/* .desktop-navbar {
+  display: none;
+} */
+
 .hero {
   width: 100%;
 }
@@ -46,8 +51,6 @@ header {
 
 main {
   text-align: center;
-  font-size: 18px;
-  font-weight: 500;
   padding: 44px 20px 32px;
 }
 
@@ -55,6 +58,11 @@ main {
   color: var(--almost-black);
   font-weight: 700;
   margin-bottom: 32px;
+}
+
+.main__text {
+  font-size: 18px;
+  line-height: 1.3em;
 }
 
 .cta {
@@ -89,6 +97,7 @@ main {
 .mobile-sidebar {
   display: none;
   background-color: rgba(0, 0, 0, 0.75);
+  font-size: 18px;
   height: 100%;
   left: 0;
   position: absolute;
@@ -121,7 +130,7 @@ ul {
   padding-bottom: 20px;
 }
 
-.list-item-label-with-icon {
+.navbar-label-with-icon {
   display: flex;
   align-items: center;
 }
@@ -136,4 +145,50 @@ ul {
 
 .second-level-list {
   padding-left: 20px;
+}
+
+@media (min-width: 1024px) {
+  html {
+    padding: 0 40px;
+  }
+
+  header {
+    display: flex;
+    height: 80px;
+    padding: 20px 0;
+  }
+
+  .header__button.mobile {
+    display: none;
+  }
+
+  .logo {
+    align-self: end;
+    height: 28px;
+  }
+
+  nav {
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    padding-left: 60px;
+    width: 100%;
+  }
+
+  nav > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  .header__button.desktop {
+    height: 40px;
+    width: 102px;
+  }
+
+  .header__button.border {
+    border: 1px solid var(--almost-black);
+    border-radius: 12px;
+  }
 }
