@@ -1,87 +1,72 @@
-function getMobileSidebarContainer() {
-  return document.getElementById("mobile-sidebar");
-}
-
-function getFeaturesLabelItemsContainer() {
-  return document.getElementById("featuresLabelItemsContainer");
-}
-
-function getFeaturesLabelIcon() {
-  return document.getElementById("featuresLabelIcon");
-}
-
-function getCompanyLabelIcon() {
-  return document.getElementById("companyLabelIcon");
-}
-
-function getCompanyLabelItemsContainer() {
-  return document.getElementById("companyLabelItemsContainer");
+function getElement(elementId) {
+  return document.getElementById(elementId);
 }
 
 function toggleFeaturesLabel() {
-  const container = getFeaturesLabelItemsContainer();
+  const container = getElement('featuresLabelItemsContainer');
   if (!container.innerHTML) {
-    getFeaturesLabelIcon().src = "images/icon-arrow-up.svg"
+    getElement('featuresLabelIcon').src = 'images/icon-arrow-up.svg'
     container.innerHTML = featuresLabelContent;
   } else {
-    getFeaturesLabelIcon().src = "images/icon-arrow-down.svg"
-    container.innerHTML = "";
+    getElement('featuresLabelIcon').src = 'images/icon-arrow-down.svg'
+    container.innerHTML = '';
   }
 }
 
 function toggleCompanyLabel() {
-  const container = getCompanyLabelItemsContainer();
+  const container = getElement('companyLabelItemsContainer');
   if (!container.innerHTML) {
-    getCompanyLabelIcon().src = "images/icon-arrow-up.svg"
+    getElement('companyLabelIcon').src = 'images/icon-arrow-up.svg'
     container.innerHTML = `
       <li>History</li>
       <li>Our Team</li>
       <li>Blog</li>
     `;
   } else {
-    getCompanyLabelIcon().src = "images/icon-arrow-down.svg"
-    container.innerHTML = "";
+    getElement('companyLabelIcon').src = 'images/icon-arrow-down.svg'
+    container.innerHTML = '';
   }
 }
-const mobileSidebar = getMobileSidebarContainer();
+
+const mobileSidebar = getElement('mobileSidebar');
 
 function toggleMobileSidebar() {
-  if (mobileSidebar.style.display === "block") {
-    document.getElementById("mobile-header-button").innerHTML = `
+  if (mobileSidebar.style.display === 'block') {
+    document.getElementById('mobile-header-button').innerHTML = `
     <img
-      class="header__menu-icon header__menu-icon--open"
-      src="./images/icon-menu.svg"
-      alt="menu icon"
+      class='header__menu-icon header__menu-icon--open'
+      src='./images/icon-menu.svg'
+      alt='menu icon'
     />
     `
 
-    mobileSidebar.style.display = "none";
+    mobileSidebar.style.display = 'none';
   } else {
-    document.getElementById("mobile-header-button").innerHTML = `
+    document.getElementById('mobile-header-button').innerHTML = `
     <img
-      class="header__menu-icon header__menu-icon--close"
-      src="./images/icon-close-menu.svg"
-      alt="menu icon"
+      class='header__menu-icon header__menu-icon--close'
+      src='./images/icon-close-menu.svg'
+      alt='menu icon'
     />
     `
-    mobileSidebar.style.display = "block";
+    mobileSidebar.style.display = 'block';
   }
 }
 
 const mobileNav = `
-  <nav class="mobile-sidebar__menu">
-    <div class="menu__header"></div>
-    <ul id="navigationList">
-      <li class="list-item-label-with-icon" onclick="toggleFeaturesLabel()">
+  <nav class='mobile-sidebar__menu'>
+    <div class='menu__header'></div>
+    <ul id='navigationList'>
+      <li class='list-item-label-with-icon' onclick='toggleFeaturesLabel()'>
         Features
-        <img class="icon-right" id="featuresLabelIcon" src="./images/icon-arrow-down.svg">
+        <img class='icon-right' id='featuresLabelIcon' src='./images/icon-arrow-down.svg'>
       </li>
-      <ul class="second-level-list" id="featuresLabelItemsContainer"></ul>
-      <li class="list-item-label-with-icon" onclick="toggleCompanyLabel()">
+      <ul class='second-level-list' id='featuresLabelItemsContainer'></ul>
+      <li class='list-item-label-with-icon' onclick='toggleCompanyLabel()'>
         Company
-        <img class="icon-right" id="companyLabelIcon" src="./images/icon-arrow-down.svg">
+        <img class='icon-right' id='companyLabelIcon' src='./images/icon-arrow-down.svg'>
       </li>
-      <ul class="second-level-list" id="companyLabelItemsContainer"></ul>
+      <ul class='second-level-list' id='companyLabelItemsContainer'></ul>
       <li>Careers</li>
       <li>About</li>
     </ul>
@@ -91,20 +76,20 @@ const mobileNav = `
 mobileSidebar.innerHTML = mobileNav;
 
 const featuresLabelContent = `
-  <li class="list-item-label-with-icon">
-    <img class="icon-left" src="./images/icon-todo.svg">
+  <li class='list-item-label-with-icon'>
+    <img class='icon-left' src='./images/icon-todo.svg'>
     Todo List
   </li>
-  <li class="list-item-label-with-icon">
-    <img class="icon-left" src="./images/icon-calendar.svg">
+  <li class='list-item-label-with-icon'>
+    <img class='icon-left' src='./images/icon-calendar.svg'>
     Calendar
   </li>
-  <li class="list-item-label-with-icon">
-    <img class="icon-left" src="./images/icon-reminders.svg">
+  <li class='list-item-label-with-icon'>
+    <img class='icon-left' src='./images/icon-reminders.svg'>
     Reminders
   </li>
-  <li class="list-item-label-with-icon">
-    <img class="icon-left" src="./images/icon-planning.svg">
+  <li class='list-item-label-with-icon'>
+    <img class='icon-left' src='./images/icon-planning.svg'>
     Planning
   </li>
 `;
