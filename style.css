@@ -49,6 +49,10 @@ header {
   width: 100%;
 }
 
+.hero__image.desktop {
+  display: none;
+}
+
 main {
   text-align: center;
   padding: 44px 20px 32px;
@@ -67,8 +71,8 @@ main {
 
 .cta {
   display: flex;
-  width: 100%;
   justify-content: center;
+  padding: 32px 0;
 }
 
 .cta__button {
@@ -76,16 +80,15 @@ main {
   border: 1px solid var(--almost-black);
   border-radius: 16px;
   color: var(--almost-white);
-  margin-bottom: 48px;
   padding: 16px 32px;
 }
 
-.footer__clients {
+.sponsors {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 32px;
   padding: 16px;
+  width: 100%;
 }
 
 .footer__attribution {
@@ -126,6 +129,10 @@ ul {
   padding: 0;
 }
 
+.navbar li, button {
+  cursor: pointer;
+}
+
 .mobile-sidebar__menu li {
   padding-bottom: 20px;
 }
@@ -147,7 +154,33 @@ ul {
   padding-left: 20px;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1439px) {
+  .desktop-navbar {
+    display: none;
+  }
+
+  .databiz-logo {
+    height: 16px;
+    width: 80px;
+  }
+
+  .audiophile-logo {
+    height: 24px;
+    width: 56px;
+  }
+
+  .meet-logo {
+    height: 16px;
+    width: 64px;
+  }
+
+  .maker-logo {
+    height: 16px;
+    width: 64px;
+  }
+}
+
+@media (min-width: 1440px) {
   html {
     padding: 0 40px;
   }
@@ -179,7 +212,7 @@ ul {
   nav > ul {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 400px;
   }
 
   .header__button.desktop {
@@ -190,5 +223,57 @@ ul {
   .header__button.border {
     border: 1px solid var(--almost-black);
     border-radius: 12px;
+  }
+
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .child-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    max-width: 1300px;
+    padding: 60px 60px;
+    width: auto;
+  }
+
+  main {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 44px 0 72px;
+    text-align: left;
+    width: 60%;
+  }
+
+  .main__title {
+    font-size: 76px;
+    margin-top: 120px;
+    margin-bottom: 0;
+    width: 82%;
+  }
+
+  .main__text {
+    width: 75%;
+  }
+
+  .hero {
+    width: 40%;
+  }
+
+  .hero__image.mobile {
+    display: none;
+  }
+
+  .hero__image.desktop {
+    display: block;
+  }
+
+  .sponsors {
+    width: 80%;
   }
 }

@@ -31,7 +31,7 @@
           alt="menu icon"
         />
       </button>
-      <nav class="desktop-navbar">
+      <nav class="navbar desktop-navbar">
         <ul>
           <li class="navbar-label-with-icon">
             Features
@@ -50,50 +50,55 @@
         </div>
       </nav>
     </header>
-    <section class="hero">
-      <img
-        class="hero__image"
-        src="./images/image-hero-mobile.png"
-        alt="hero"
-      />
-    </section>
-    <main>
-      <h1 class="main__title">Make remote work</h1>
-      <p class="main__text">
-        Get your team in sync, no matter your location. Streamline processes,
-        create team ritual, and watch productivity soar.
-      </p>
-    </main>
-    <section class="cta">
-      <button class="cta__button">Learn more</button>
-    </section>
+    <div class="container">
+      <div class="child-container">
+        <section class="hero">
+          <img
+            class="hero__image mobile"
+            src="./images/image-hero-mobile.png"
+            alt="hero"
+          />
+          <img
+            class="hero__image desktop"
+            src="./images/image-hero-desktop.png"
+            alt="hero"
+          />
+        </section>
+        <main>
+          <h1 class="main__title">Make remote work</h1>
+          <p class="main__text">
+            Get your team in sync, no matter your location. Streamline processes,
+            create team ritual, and watch productivity soar.
+          </p>
+          <section class="cta">
+            <button class="cta__button">Learn more</button>
+          </section>
+          <section class="sponsors">
+            <img
+              class="databiz-logo"
+              src="./images/client-databiz.svg"
+              alt="databiz logo"
+            />
+            <img
+              class="audiophile-logo"
+              src="./images/client-audiophile.svg"
+              alt="audiophile logo"
+            />
+            <img
+              class="meet-logo"
+              src="./images/client-meet.svg"
+              alt="meet logo"
+            />
+            <img
+              class="maker-logo"
+              src="./images/client-maker.svg"
+              alt="maker logo"
+            />
+          </section>
+        </main>
+      </div>
+    </div>
     <footer>
-      <section class="footer__clients">
-        <img
-          src="./images/client-databiz.svg"
-          alt="databiz logo"
-          height="16px"
-          width="80px"
-        />
-        <img
-          src="./images/client-audiophile.svg"
-          alt="audiophile logo"
-          height="24px"
-          width="56px"
-        />
-        <img
-          src="./images/client-meet.svg"
-          alt="meet logo"
-          height="16px"
-          width="64px"
-        />
-        <img
-          src="./images/client-maker.svg"
-          alt="maker logo"
-          height="16px"
-          width="64px"
-        />
-      </section>
       <section class="footer__attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

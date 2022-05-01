@@ -54,7 +54,7 @@ function toggleMobileSidebar() {
 }
 
 const mobileNav = `
-  <nav class='mobile-sidebar__menu'>
+  <nav class='navbar mobile-sidebar__menu'>
     <div class='menu__header'></div>
     <ul id='navigationList'>
       <li class='navbar-label-with-icon' onclick='toggleFeaturesLabel()'>
