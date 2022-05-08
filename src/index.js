@@ -1,3 +1,10 @@
+getElement('companyDesktopLabel').addEventListener('mouseenter', () => showMenuCard('companyOptionsCard'));
+getElement('companyDesktopLabel').addEventListener('mouseleave', () => hideMenuCard('companyOptionsCard'));
+getElement('companyOptionsCard').addEventListener('mouseenter', () => showMenuCard('companyOptionsCard'));
+getElement('companyOptionsCard').addEventListener('mouseleave', () => hideMenuCard('companyOptionsCard'));
+getElement('featuresDesktopLabel').addEventListener('mouseenter', () => showMenuCard('featuresOptionsCard'));
+getElement('featuresDesktopLabel').addEventListener('mouseleave', () => hideMenuCard('featuresOptionsCard'));
+
 function getElement(elementId) {
   return document.getElementById(elementId);
 }
@@ -26,6 +33,24 @@ function toggleCompanyLabel() {
     getElement('companyLabelIcon').src = 'images/icon-arrow-down.svg'
     container.innerHTML = '';
   }
+}
+
+function toggleFeaturesDesktopLabel() {
+
+}
+
+function toggleCompanyDesktopLabel() {
+
+}
+
+function showMenuCard(cardId) {
+  getElement(cardId).classList.remove('hide');
+}
+
+function hideMenuCard(cardId) {
+  setTimeout(() => {
+    getElement(cardId).classList.add('hide');
+  }, 100);
 }
 
 const mobileSidebar = getElement('mobileSidebar');

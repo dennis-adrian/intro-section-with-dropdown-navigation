@@ -33,14 +33,45 @@
       </button>
       <nav class="navbar desktop-navbar">
         <ul>
-          <li class="navbar-label-with-icon">
-            Features
-            <img class="icon-right" id="featuresLabelIcon" src="./images/icon-arrow-down.svg">
-          </li>
-          <li class="navbar-label-with-icon">
-            Company
-            <img class="icon-right" id="featuresLabelIcon" src="./images/icon-arrow-down.svg">
-          </li>
+          <div class="expansive-label desktop">
+            <li class="label-with-icon" id="featuresDesktopLabel" onclick="toggleFeaturesDesktopLabel()">
+              Features
+              <img class="icon-right" id="featuresDesktopLabelIcon" src="./images/icon-arrow-down.svg">
+            </li>
+            <div class="card features hide" id="featuresOptionsCard">
+              <ul>
+                <li class='label-with-icon'>
+                  <img class='icon-left' src='./images/icon-todo.svg'>
+                  Todo List
+                </li>
+                <li class='label-with-icon'>
+                  <img class='icon-left' src='./images/icon-calendar.svg'>
+                  Calendar
+                </li>
+                <li class='label-with-icon'>
+                  <img class='icon-left' src='./images/icon-reminders.svg'>
+                  Reminders
+                </li>
+                <li class='label-with-icon'>
+                  <img class='icon-left' src='./images/icon-planning.svg'>
+                  Planning
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="expansive-label desktop">
+            <li class="navbar-label-with-icon" id="companyDesktopLabel">
+              Company
+              <img class="icon-right" id="companyDesktopLabelIcon" src="./images/icon-arrow-down.svg">
+            </li>
+            <div class="card company hide" id="companyOptionsCard">
+              <ul>
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+            </div>
+          </div>
           <li>Careers</li>
           <li>About</li>
         </ul>

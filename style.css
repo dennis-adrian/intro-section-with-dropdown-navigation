@@ -37,10 +37,6 @@ header {
   height: 28px;
 }
 
-/* .desktop-navbar {
-  display: none;
-} */
-
 .hero {
   width: 100%;
 }
@@ -137,21 +133,25 @@ ul {
   padding-bottom: 20px;
 }
 
-.navbar-label-with-icon {
+.label-with-icon {
   display: flex;
   align-items: center;
 }
 
 .icon-left {
-  padding-right: 8px;
+  padding-right: 12px;
 }
 
 .icon-right {
-  padding-left: 8px;
+  padding-left: 12px;
 }
 
 .second-level-list {
   padding-left: 20px;
+}
+
+.hide {
+  display: none;
 }
 
 @media (max-width: 1439px) {
@@ -275,5 +275,37 @@ ul {
 
   .sponsors {
     width: 80%;
+  }
+
+  .expansive-label.desktop {
+    position: relative;
+  }
+
+  .card {
+    border-radius: 16px;
+    box-shadow: 0px 0px 24px 12px rgb(105 105 105 / 20%);
+    line-height: 2rem;
+    min-width: 120px;
+    padding: 24px;
+  }
+
+  .card.features {
+    position: absolute;
+    right: 0;
+    top: 40px;
+  }
+  
+  .card.company {
+    position: absolute;
+    left: 0;
+    top: 40px;
+  }
+
+  .navbar li:hover, button:hover {
+    color: var(--almost-black);
+  }
+
+  .cta__button:hover, .active {
+    background-color: var(--almost-white);
   }
 }
